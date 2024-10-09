@@ -1,0 +1,157 @@
+/*common value variables*/
+
+:root {
+    --main-bg-color: #f4f4f4;
+    --primary-color: #173e7d;
+    --secondary-color: #ffffff;
+    --hover-color: #e6e6e6;
+    --text-color: #000000;
+    --font-family: Arial, sans-serif;
+    --font-size-large: 48px;
+    --font-size-medium: 36px;
+    --font-size-small: 24px;
+    --font-size-xsmall: 20px;
+    --border-radius: 4px;
+    --padding: 20px;
+    --margin: 0;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* Main body*/
+body {
+    font-family: var(--font-family);
+    background-color: #f4f4f4;
+}
+/*Headers*/
+.header {
+    background-color: var(--primary-color);
+    padding: 15px;
+    color: var(--secondary-color);
+    text-align: center;
+    position: relative;
+}
+.header h1 {
+    font-size: var(--font-size-large);
+}
+/*container for the whole page*/
+.container {
+    display: flex;
+    max-width: 1700px;
+    margin: auto;
+    padding: var(--padding);
+}
+/*home button*/
+.home-button {
+    position: absolute;
+    top: 20px;
+    left: 15px;
+    background-color: var(--secondary-color); 
+    color: var(--text-color);
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: var(--font-size-xsmall);
+    cursor: pointer;
+    border: none;
+    border-radius: var(--border-radius);
+}
+
+.home-button:hover {
+    background-color: var(--hover-color); 
+}
+
+/*Placeholder text for input boxes*/
+::placeholder{
+    font-size: 18px;   
+}
+
+/* interaction section */
+.interaction {
+    flex: 1;
+    padding: 10px;
+    padding-right: 20px;
+    background-color: rgba(0, 0, 0, 0.1); 
+    border-radius: var(--border-radius);
+    overflow: auto; 
+    margin-right: 100px;
+}
+/*Interaction Header*/
+.interaction h2 {
+    text-align: center;
+    font-size: var(--font-size-medium);
+    color: #000000;
+}
+
+/* form section*/
+.form-container {
+    flex: 1;
+    padding-bottom: 50px;
+    color: var(--text-color);
+}
+.form-container h2 {
+    text-align: center;
+    font-size: var(--font-size-medium);
+    color: var(--text-color);
+}
+.form-group label {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 5px; 
+}
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    font-size: var(--font-size-small);
+    color: var(--text-color);
+}
+
+textarea {
+    width: 100%;
+    padding: 5px;
+    font-size: var(--font-size-xsmall);
+    border: 1px solid var(--text-color);
+    border-radius: var(--border-radius);
+}
+input[type='checkbox']{
+    width:20px;
+    height:20px;
+    border-radius:6px;
+}
+input[type='checkbox']:checked {
+    background: #abd;
+}
+
+/*Submit Button*/
+button {
+    margin-top: 20px;
+    padding: 2% 5%;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+}
+button:hover {
+    background-color: #225ab3;
+}
+/* output section */
+.output {
+    border-left: 4px solid var(--primary-color);
+    padding-left: 10px;
+    background-color: #f9f9f9;
+    border-radius: var(--border-radius);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.output p {
+    padding: 5px 0;
+    font-size: var(--font-size-xsmall);
+    line-height: 3;
+    border-bottom: 1px solid #ddd;
+}
+
+

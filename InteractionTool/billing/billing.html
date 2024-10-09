@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="interaction-generator">
+    <meta name="keywords" content="HTML, css, javascript">
+    <meta name="author" content="Adam Taylor">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Billing Interaction Generator</title>
+    <!-- CSS Style Sheet -->
+    <link rel="stylesheet" href="../styles/styles.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <div class="header">
+        <!-- Home Button -->
+        <a href="../index.html" class="home-button">Home</a>
+        <h1>Billing Interaction Generator</h1>
+    </div>
+    <!-- Main Container -->
+    <div class="container">
+        <!-- Interaction Output Section -->
+        <div class="interaction">
+            <h2>Interaction</h2>
+            <div id="output" class="output"></div>
+            <!-- Copy Text Button -->
+            <button id="copyButton">Copy Text</button>   
+            <span id="copyMessage"></span>
+        </div>
+        <!-- Form Section, the part that is filled in by the agent -->
+        <div class="form-container">
+            <h2>Template</h2>
+            <form id="myForm">
+                <br>
+                <!-- Authorized User/Account Holder Section -->
+                <div class="form-group">
+                    <label for="verified-ah">Verified Account Holder</label>
+                    <input type="checkbox" id="verified-ah" name="verified-boxes" value="1" onclick="selectOnlyOne(this)"/>
+                    <label for="verified-au">Verified Authorized User</label>
+                    <input type="checkbox" id="verified-au" name="verified-boxes" value="2" onclick="selectOnlyOne(this)"/>
+                </div>
+                <br>
+                <!-- Contact Details Updated -->
+                <div class="form-group">
+                    <label for="contact">Contact Details Updated</label>
+                    <input type="checkbox" id="contact" name="contact">
+                </div>
+                <br>
+                <!-- Spoke With -->
+                <div class="form-group">
+                    <label for="name">Spoke With:</label>
+                    <textarea id="name" name="name" required rows="1"></textarea>
+                </div>
+                <br>
+                <!-- Competetive Dropdown -->
+                <div class="form-group">
+                    <label for="competetive">Competetive</label>
+                    <input type="checkbox" id="competetive" name="competetive" onclick="dynInput(this);"/>
+                    <p id="insertInput" ></p>
+                </div>
+                <!-- Offer Section -->
+                <div class="form-group">
+                    <label for="offer">Offer: </label>
+                    <label for="accepted">Accepted</label>
+                    <input type="checkbox" id="accepted" name="bill-offer-boxes" value="1" onclick="selectOnlyOne(this)"/>
+                    <label for="declined">Declined</label>
+                    <input type="checkbox" id="declined" name="bill-offer-boxes" value="2" onclick="selectOnlyOne(this)"/>
+                    <textarea placeholder="Product Promotions, Equipment Promotions, and Total Amount" id="offer" name="offer" rows="4" required></textarea>
+                </div>
+                <br>
+                <!-- General Description/Additional Comments -->
+                <div class="form-group">
+                    <label for="description">General Description:</label>
+                    <textarea placeholder="Any Additional Information Regarding Your Interaction" id="description" name="description" rows="4"></textarea>
+                </div>
+                <br>
+                <!-- Terms and Conditions -->
+                <div class="form-group">
+                    <input type="checkbox" id="tandc" name="tandc">
+                    <label for="tandc">Informed of T&C (EG. Rate Increases, ETFs, Install Chargeback)</label>
+                </div>
+                <!-- Submit Button -->
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+    <!-- External JavaScript files for functions -->
+    <script src="billing-script.js"></script>
+    <script src="../global-script.js"></script>
+</body>
+</html>
+

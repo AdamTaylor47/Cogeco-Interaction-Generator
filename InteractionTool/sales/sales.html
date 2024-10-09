@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="interaction-generator">
+    <meta name="keywords" content="HTML, css, javascript">
+    <meta name="author" content="Adam Taylor">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sales Interaction Generator</title>
+    <!-- CSS Styles -->
+    <link rel="stylesheet" href="../styles/styles.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <div class="header">
+        <!-- Home Button -->
+        <a href="../index.html" class="home-button">Home</a>
+        <h1>Sales Interaction Generator</h1>
+    </div>
+    <!-- Main Container -->
+    <div class="container">
+        <!-- Interaction Output Section -->
+        <div class="interaction">
+            <h2>Interaction</h2>
+            <div id="output" class="output"></div>
+            <!-- Copy Text Button -->
+            <button id="copyButton">Copy Text</button>   
+            <span id="copyMessage"></span>
+        </div>
+        <!-- Form Section, the part that is filled in by the agent-->
+        <div class="form-container">
+            <h2>Template</h2>
+            <form id="myForm">
+                <!-- Who the registered Account Holder will be -->
+                <div class="form-group">
+                    <label for="name">Account Holder:</label>
+                    <textarea id="name" name="name" required rows="1"></textarea>
+                </div>
+                <br>
+                <!-- Install Type -->
+                <div class="form-group">
+                    <label for="self-install">Self Install: </label>
+                    <input type="checkbox" id="self-install" name="install-boxes" onclick="selectOnlyOne(this)"/>
+                    <label for="tech-install">Tech Install: </label>
+                    <input type="checkbox" id="tech-install" name="install-boxes" onclick="selectOnlyOne(this)"/>
+                </div>
+                <br>
+                <!-- What Services Are Being Installed -->
+                <div class="form-group">
+                    <label for="services">Services: </label>
+                    <label for="internet">Internet</label>
+                    <input type="checkbox" id="internet" name="internet"/>
+                    <label for="television">Television</label>
+                    <input type="checkbox" id="television" name="television"/>
+                    <label for="phone">Phone</label>
+                    <input type="checkbox" id="phone" name="phone"/>
+                </div>
+                <br>
+                <!-- Offer Section -->
+                <div class="form-group">
+                    <label for="offer">Offer Details: </label>
+                    <textarea placeholder="ex: UF 1GB/Epico X-Stream/Freedom Phone for 150$ 24 months " id="offer" name="offer" rows="4"></textarea>
+                </div>
+                <br>
+                <!-- Terms and Conditions -->
+                <div class="form-group">
+                    <input type="checkbox" id="tandc" name="tandc">
+                    <label for="tandc">Informed of T&C (EG. Rate Increases, ETFs, Install Chargeback)</label>
+                </div>
+                <!-- Submit Button -->
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+    <!-- External JavaScript files for functions -->
+    <script src="sales-script.js"></script>
+    <script src="../global-script.js"></script>
+</body>
+</html>
